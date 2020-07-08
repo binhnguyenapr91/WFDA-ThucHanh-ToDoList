@@ -7,7 +7,7 @@ interface ITodo {
   complete: boolean;
 }
 
-let _id = 1;
+let idNumber = 1;
 
 @Component({
   selector: 'app-todo',
@@ -26,7 +26,7 @@ export class TodoComponent implements OnInit {
     const  {value} = this.userInput;
     if (value){
       const todo: ITodo = {
-        id: _id++,
+        id: idNumber++,
         content: value,
         complete: false
       };
